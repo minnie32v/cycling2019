@@ -1,0 +1,1194 @@
+@charset "utf-8";
+/*
+  danny 201811
+  1. $Reset
+  2. $font
+  3. $body,html
+  4. $共用
+  5. $Mobile
+  6. $Pad
+  7. $橫的版型
+  8. $Pc
+  9. $1025~1279
+*/
+
+/* $Reset
+--------------------------------------------------------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote{margin:0;padding:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:400}
+ol,ul{list-style:none}
+q:before,q:after{content:''}
+abbr,acronym{border:0}
+a{background:transparent;text-decoration:none;color:inherit;cursor:pointer;line-height:1em;display:inline-block}
+a:active{outline:0}
+input,textarea,button,select,option{border:0;margin:0;outline:none;padding:0;font-size:1.6rem;font-family:'Noto Sans TC','Open Sans','Arial','Microsoft JhengHei','Apple LiGothic Medium',sans-serif;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none}
+select::-ms-expand{display:none}
+input::-moz-placeholder,
+textarea::-moz-placeholder{color:#ccc}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{color:#ccc}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{color:#ccc}
+
+/* $font
+--------------------------------------------------------------------------------------*/
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css); */
+
+/* cwTeXYen (Chinese Traditional) http://www.google.com/fonts/earlyaccess */
+@font-face {
+  font-family: 'cwTeXHei';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+}
+
+/* @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); */
+/*
+* Noto Sans TC (Chinese_traditional) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 400;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 500;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format('opentype');
+ }
+@font-face {
+font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 700;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 900;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+ }
+
+
+:before ,:after{ font-family:'Font Awesome 5 Free','Linearicons-Free',"微軟正黑體"; font-weight: 900;}
+
+
+/* $body,html
+--------------------------------------------------------------------------------------*/
+html,body{ width: 100%; height: 100%; color:#707070; font-family:"微軟正黑體","新細明體","蘋果儷黑體", Arial, Helvetica, sans-serif; font-size: 10px;}
+*{
+  box-sizing: border-box;
+  position:relative;
+  /* border: 1px solid #000; */
+}
+
+/* $共用
+--------------------------------------------------------------------------------------*/
+/*----清除浮動技巧----*/
+.clearfix:before,.clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+/*----清除浮動技巧----*/
+
+/* IMAGE REPLACE */
+.imageReplace{ text-indent: 100%; white-space: nowrap; overflow: hidden;}
+
+/* float */
+.floatL{ float: left;}
+.floatR{ float: right;}
+
+/* button reset */
+button{ font-family:"微軟正黑體","新細明體","蘋果儷黑體", Arial, Helvetica, sans-serif; border: none; }
+
+/* input reset */
+input{ font-family:"微軟正黑體","新細明體","蘋果儷黑體", Arial, Helvetica, sans-serif; border: none; }
+
+/* select reset */
+select{ font-family:"微軟正黑體","新細明體","蘋果儷黑體", Arial, Helvetica, sans-serif; }
+
+/* loading */
+.loading{ width:100vw; height:100%; min-height:100vh; position:fixed; left:0; top:0; background-color:rgba(0,0,0,0.9); z-index:100; display:flex; justify-content:center; align-items:center;}
+.loading-circle circle{-webkit-animation:c1_2 9s linear infinite,c1_3 4.5s infinite; -moz-animation:c1_2 9s linear infinite,c1_3 4.5s infinite; animation:c1_2 9s linear infinite,c1_3 4.5s infinite; }
+/*loading 控制粗細*/
+@-webkit-keyframes c1_2{0%{stroke-width:0; } 10%{stroke-width:8; } 75%{stroke-width:8; } 90%{stroke-width:0; } 100%{stroke-width:0; } }
+/*loading 動態*/
+@-webkit-keyframes c1_3{
+0%{stroke-dasharray:104,156; stroke-dashoffset:-52; } 16%{stroke-dasharray:1,156; stroke-dashoffset:-52; }
+16.01%{stroke-dasharray:1,156; stroke-dashoffset:-208; } 33%{stroke-dasharray:104,52; stroke-dashoffset:-104; }
+33.01%{stroke-dasharray:104,52; stroke-dashoffset:-104; } 49%{stroke-dasharray:1,156; stroke-dashoffset:-104; } 
+49.01%{stroke-dasharray:1,156; stroke-dashoffset:52; } 66%{stroke-dasharray:104,52; stroke-dashoffset:156; }
+66.01%{stroke-dasharray:104,52; stroke-dashoffset:156; } 82%{stroke-dasharray:1,156; stroke-dashoffset:156; }
+82.01%{stroke-dasharray:1,156; stroke-dashoffset:156; } 99.99%{stroke-dasharray:104,52; stroke-dashoffset:256; }
+}
+/* END loading */
+
+section{width: 100%;}
+img{ width: 100%; }
+a{text-decoration: none;}
+
+/* 錨點 */
+a.anchor{
+  display:block; 
+  position:relative; 
+  width:100%; 
+  padding-bottom:100px; 
+  margin-top:-100px;
+  z-index: -999;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.container:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.box{
+  padding:160px 0;
+}
+.block{
+  display: flex;
+}
+.col-1{
+  width: 100%;
+  padding: 1em;
+  margin: 1em;
+}
+.col-2{
+  width: calc(100%/2);
+  padding: 2em;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+.col-2:last-child{
+  margin-right: 0;
+}
+
+.col-3{
+  width: calc(100%/3);
+  padding: 1em;
+  margin: 1em;
+}
+
+/* bg */
+.bg-white{background-color: #fff;}
+.bg-yellow{background-color: #FFF4C9;}
+.bg-lightblue{background-color: #F5FCFF;}
+.bg-blue{background-color: #48C1F0;}
+.bg-darkblue{background-color: #00A0E9;}
+.bg-1{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-bottom:50%;
+  background: url("../images/bg-1.png") no-repeat center bottom; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.bg-2{
+  width: 100%;
+  padding-top:0;
+  background: url("../images/bg-2.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.bg-3{
+  width: 100%;
+  padding-top:7%;
+  background: url("../images/bg-3.png") no-repeat center bottom;  
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.bg-4{
+  display: inline-block;
+  width: 100%;
+  padding:6% 0;
+  background: url("../images/bg-4.png") no-repeat center; 
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.bg-5{
+  width: 100%;
+  padding-top:0;
+  background: url("../images/bg-5.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+
+/* font */
+h1{font-size: 2.8em;}
+h2{font-size: 1.8em;}
+h3{font-size: 1.6em;}
+p{font-size: 1.4em; line-height: 1.8em;}
+.date{font-size: 1.6em; font-weight: bold; color:#FFCC00; padding: .4em 0;}
+.title{font-weight: bold; text-align: center;}
+.description{font-size: 1.6em; text-align: center;}
+
+/* font-color */
+.t-white{color:#fff;}
+.t-yellow{color:#FFCC00;}
+.t-blue{color: #48C1F0;}
+.t-darkblue{color: #00A0E9;}
+
+/* btn */
+.btn{
+  width: auto;
+  border-radius: 16px;
+  padding:.4em 1em;
+  margin: 1em auto;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+}
+.yellow-btn{
+  background-color: #FFCC00;
+  color: #fff;
+}
+.yellow-btn:hover{
+  background-color: #fff;
+  color: #48C1F0;
+}
+
+/* $Pc
+--------------------------------------------------------------------------------------*/
+/* header */
+.hide{ transform: translate(0,-100%); }
+header{
+  background:#F5FCFF; 
+  position:fixed; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  z-index: 999; 
+  transition: all .8s cubic-bezier(.23,1,.32,1);
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navToggle{display: none;}
+
+.logo{
+  display: inline-block;
+  width: 100px;
+  height:100px;
+  background-image: url('../images/logo.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.facebook{
+  display: inline-block;
+  width: 40px;
+  height:40px;
+  background-image: url('../images/facebook.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+}
+.items{
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #707070;
+  margin: 0 .8em;
+  padding: .6em .8em;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+.items:hover{
+  border-bottom: 4px solid #48C1F0;
+}
+.items:hover:last-child{
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+/* end header */
+
+/* kv */
+.kv-block{
+  height: 615px;
+  overflow: hidden;
+  padding-top: 100px;
+}
+.kv{
+  width: 100%;
+  padding-top: 38%;
+  background: url("../images/kv.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+  display: flex;
+  justify-content: center;
+}
+.earth{
+  width: 80%;
+  padding-top: 80%;
+  margin-top: -300px;
+  background: url("../images/earth.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+  -webkit-animation:earth 100s infinite linear;
+}
+@keyframes earth{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+/* end kv */
+
+/* event */
+.event{
+  width: calc(100%/2);
+  display: flex;
+  justify-content: center;
+}
+.event-box{
+  width: 100%;
+  border: 4px solid #48C1F0;
+  border-radius: 16px;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.event-1{
+  width: 100%;
+  padding-top: 100%;
+  background: url("../images/event-1.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.event-2{
+  width: 100%;
+  padding-top: 100%;
+  background: url("../images/event-2.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.event-text{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* end event */
+
+/* news */
+.news{
+  width: calc(100%/2);
+}
+.news-title1{
+  text-align: center;
+  margin-top: 2em;
+}
+.news-title2{
+  text-align: center;
+  letter-spacing: 8px;
+}
+.news-slider{
+  width: 80%;
+  margin: 0 auto;
+  height: a;
+}
+
+.article{  
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.4em;
+}
+
+
+/* slick */
+.slick-prev:before{
+  content: '\f053';
+  font-family: 'Font Awesome 5 Free';
+}
+.slick-next:before{
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+}
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before,
+.slick-prev:before, .slick-next:before{
+  opacity: 1;
+}
+.slick-dot li{
+  margin: 1em 0;
+}
+.slick-dots li button:before{
+  opacity: 1;
+  color: #fff;
+}
+.slick-dots li.slick-active button:before{
+  opacity: 1;
+  color:#FFCC00;
+}
+/* end news */
+
+/* about */
+
+.about{
+  position: absolute;
+  /* margin: 8em auto; */
+  width: 100%;
+}
+.about-content{
+  display: flex;
+  justify-content: center;
+  margin: 1em auto;
+}
+/* end about */
+
+/* 台灣各地活動 */
+.area-box{
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 2em;
+}
+.area-box .t-blue{
+  text-align: center;
+  padding: .4em 0;
+}
+.area-box p{
+  text-align: left;
+  line-height: 1.5em;
+  height: 100px;
+}
+/* end 台灣各地活動 */
+
+/* 好康情報 */
+
+.ubike{
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 10%;
+  background: url("../images/ubike.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.giant{
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 20%;
+  background: url("../images/giant.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.cycling{
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 20%;
+  background: url("../images/cycling-life-style-foundation.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.ubike-1{
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 5%;
+  background: url("../images/ubike.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.giant-1{
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 7%;
+  background: url("../images/giant.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.cycling-1{
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 6%;
+  background: url("../images/cycling-life-style-foundation.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.formosa{
+  margin: 2em auto 0 auto;
+  width: 85%;
+  padding-top: 5%;
+  background: url("../images/formosa.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.public{
+  margin: 2em auto 0 auto;
+  width: 100%;
+  padding-top: 5%;
+  background: url("../images/public.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+
+
+.prize-box{
+  margin-top: 2em;
+  padding: 2em;
+  border-radius: 16px;
+}
+.prize-box .col-2{
+  padding: 0 2em 0 2em;
+  margin-top: 0;
+}
+.col-2 .t-blue{
+  margin-top: 1em;
+}
+.col-2 li{
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+
+.prize-pic .col-3{
+  padding: 0;
+  margin-left: 0;
+}
+
+/* popup */
+
+.popup-wrap {
+  width:100vw; 
+  height:100%; 
+  min-height:100vh; 
+  position:fixed;
+  display: none;
+  z-index:999;
+  top: 0px;
+  left: 0px;
+  content: '';
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.popup-box {
+  height: 400px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 4em;
+  transform: translate(-50%, -50%) scale(0.5);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  background: #fff;
+  overflow:auto;
+}
+
+.close-btn {
+  border: 2px solid;
+  z-index:999;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  font-size: 3em;
+  border-radius: 50px;
+  color: #48C1F0;
+  text-decoration: none;
+}
+
+.close-btn:before,.close-btn:after{
+  position:absolute; 
+  content:''; 
+  width:80%; 
+  height:2px; 
+  display:block; 
+  background:#48C1F0; 
+  top:50%; 
+  left:10%; 
+  transform:rotate(-45deg);
+  z-index:999;
+}
+.close-btn:after{ transform:rotate(45deg); }
+
+
+
+.popup-box .close-btn:hover {
+  /* -webkit-transform: rotate(180deg); */
+  /* transform: rotate(180deg); */
+}
+
+.transform-in, .transform-out {
+  display: block;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.transform-in {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.transform-out {
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* end popup */
+
+/* end 好康情報 */
+
+
+/* footer */
+.title-bar:before{  
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px; 
+  height: 32px;
+  margin-right: 4px;
+  background-color: #48C1F0;
+}
+.title-bar{
+  margin-bottom: 1em;
+  color: #707070;
+}
+
+.FB-text{
+  display: flex;
+  align-items: center;
+  margin: 0 2em;
+}
+.FB-text h3{
+  margin-left: 4px;
+}
+.copyright{
+  margin-top: 160px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #00A0E9;
+  color: #fff;
+  text-align: center;
+}
+.footer-icon{
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  padding-top:8%;
+  background: url("../images/footer-icon.png") no-repeat center bottom; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.btn-top{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+}
+
+/* end footer */
+
+/*----------*\
+    event頁
+\*----------*/
+.event-content{
+  margin: 0 auto;
+  text-align: center;
+  max-width: 480px;
+}
+.event-pic-1{
+  width: 100%;
+  padding-top: 60%;
+  background: url("../images/event-pic-1.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.event-pic-2{
+  max-width: 480px;
+  width: 100%;
+  padding-top: 60%;
+  background: url("../images/event-pic-2.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+}
+.bg-5 h2{
+  padding-top: 1em ;
+}
+/*----------*\
+  end event頁
+\*----------*/
+
+
+
+/* $Mobile
+--------------------------------------------------------------------------------------*/
+@media screen and (max-width:767px){
+
+.logo{
+  width: 80px;
+  height:80px;
+}
+/* 共用 */
+.block{
+  flex-wrap: wrap;
+}
+.box{
+  padding: 40px 0;
+}
+.col-2{
+  width: 100%;
+  padding: 1em;
+  margin: 0;
+}
+.col-3{
+    width: 100%;
+}
+.bg-1 {
+    padding-bottom: 200%;
+}
+
+.bg-3 {
+    width: 100%;
+    padding-top: 7%;
+    background: url('../images/bg-3-m.png') no-repeat center bottom;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+}
+
+/* menu */
+.navToggle{
+  display: block;
+  z-index: 111;
+  position: absolute;
+  width: 80px;
+  height:80px;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  cursor: pointer;
+}
+.navToggle .icon {
+  -webkit-transition: all 0.4s ease-out;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 40px;
+  height: 2px;
+  background-color: #00A0E9;
+}
+.navToggle .icon:before, .navToggle .icon:after {
+  -webkit-transition: all 0.25s ease-out;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #00A0E9;
+  content: '';
+}
+.navToggle .icon:before {
+  top: -8px;
+  left: 0;
+}
+.navToggle .icon:after {
+  top: 8px;
+  left: 0;
+}
+.navToggle:hover .icon {
+  background-color: #00A0E9;
+}
+.navToggle:hover .icon:before {
+  top: -8px;
+  background-color: #00A0E9;
+}
+.navToggle:hover .icon:after {
+  top: 8px;
+  background-color: #00A0E9;
+}
+.navToggle.open .icon {
+  -webkit-transition: all 0.4s ease-out;
+  background-color: transparent;
+  -webkit-transform: rotate(180deg);
+}
+.navToggle.open .icon:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+}
+.navToggle.open .icon:after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+}
+
+#menu {
+  background-color: #F5FCFF;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 80px;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.5s;
+}
+#menu ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.8em;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+#menu li:first-child {
+  margin-top: 0;
+}
+#menu li {
+  margin: 0;
+  padding: .6em 0;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.25s;
+}
+#menu li:hover {
+  text-decoration: underline;
+}
+#menu.active {
+  height: 100vh;
+}
+
+.list{
+  flex-wrap: wrap;
+}
+.items{
+  font-size: 1em;
+  width: 100%;
+}
+
+.items:hover{
+  border-bottom:none;
+}
+
+/* end menu */
+
+/* kv */
+.kv-block{
+  height: 500px;
+  overflow: hidden;
+  padding-top: 100px;
+}
+.kv{
+  width: 100%;
+  padding-top: 72%;
+  background: url("../images/kv-m.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+  display: flex;
+  justify-content: center;
+}
+.earth{
+  width: 100%;
+  padding-top: 100%;
+  margin-top: -26px;
+  background: url("../images/earth.png") no-repeat center top; 
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  background-size:contain;
+  -webkit-animation:earth 100s infinite linear;
+}
+@keyframes earth{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+/* end kv */
+/* end kv */
+/* event */
+#event-1{
+  margin-top: 10px;
+}
+.event{
+  width: 100%;
+  flex-wrap: wrap;
+}
+.event-box{
+  display: flex;
+}
+.event-1,.event-2{
+  padding-top: 44%;
+}
+/* end event */
+/* news */
+.news{
+  width: 100%;
+  padding-bottom: 2em;
+}
+.news-title1{
+  margin-top: 1em;
+}
+.article{  
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  word-break: break-all;
+}
+
+/* end news */
+
+/* 關於自行車日 */
+.about{
+  margin: 2em auto;
+}
+.about-content{
+  flex-wrap: wrap;
+}
+/* end 關於自行車日 */
+
+/* 好康活動 */
+.ubike {
+    padding-top: 30%;
+}
+.prize-box{
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.prize-box .col-1{
+    margin: 0;
+}
+.prize-box .col-2{
+    padding: 0 1em 1em 1em;
+}
+
+/* popup */
+.popup-box {
+    height: 450px;
+    max-width: 330px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    background: #fff;
+    overflow:auto;
+}
+
+.close-btn {
+  top: 6%;
+  right: 6%;
+}
+
+/* end popup */
+
+/* end 好康活動 */
+
+
+/* footer */
+.title-bar ~ p{
+  text-align: center;
+}
+.FB-text {
+  margin: 0em auto 2em auto;
+}
+.public {
+    padding-top: 30%;
+  }
+
+.footer-icon{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom:24%;
+  background: url('../images/footer-icon-m.png') no-repeat center bottom;
+  bottom: 14px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+}
+.copyright {
+  margin-top: 200px;
+  height: 80px;
+  padding: 16px;
+  line-height: 2em;
+}
+.btn-top{
+  height: 120px;
+}
+
+.ubike-1,.giant-1,.cycling-1,.formosa,.public{  
+  width: 100%;
+  padding-top: 30%; 
+}
+
+
+/* end footer */
+
+}
+
+/* $Pad
+--------------------------------------------------------------------------------------*/
+@media screen and (min-width:768px) and (max-width:1024px){
+
+
+/* 共用 */
+.m-block{
+  flex-wrap: wrap;
+}
+.box{
+  padding: 80px 0;
+}
+.bg-1{
+  padding-bottom: 64%;
+}
+
+/* header */
+.items{
+  padding: .6em 0;
+  margin: 0 .4em;
+}
+/* end header */
+
+/* kv */
+.kv-block{
+  height: 500px;
+}
+.kv{
+  padding-top: 29%;
+}
+.earth{
+  width: 80%;
+  padding-top: 80%;
+  margin-top: -120px;
+}
+/* end kv */
+/* event */
+.event{
+  width: 100%;
+}
+
+/* end event */
+
+/* news */
+.news{
+  width: 100%;
+  padding-bottom: 2em;
+}
+.news-title1 {
+    text-align: center;
+    margin-top: 1em;
+}
+/* end news */
+
+/* 關於世界自行車日 */
+.about{
+  margin:4em 0;
+}
+/* end 關於世界自行車日 */
+
+/* 各地慶祝活動 */
+.area-box p{
+  height:160px;
+}
+
+/* end 各地慶祝活動 */
+
+/* 好康活動 */
+.prize-box{
+  margin-bottom: 1em;
+}
+/* popup */
+.popup-box {
+    height: 800px;
+    max-width: 600px;
+    width: 100%;
+    margin: 2em auto 0 auto;
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    background: #fff;
+    overflow:auto;
+}
+.close-btn {
+  top: 6%;
+  right: 6%;
+}
+/* end popup */
+/* end 好康活動 */
+
+/* footer */
+.footer-icon{
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.copyright {
+    margin-top: 100px;
+  }
+/* end footer */
+}
